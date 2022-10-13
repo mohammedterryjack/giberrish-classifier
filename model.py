@@ -9,10 +9,10 @@ class GiberrishClassifier:
         self.recognised_characters = data["characters"]
         
     def get_gibberish(self, text:str) -> str:
-        return ''.join(filter(self.is_giberrish,text.split()))
+        return ' '.join(filter(self.is_giberrish,text.split()))
 
     def remove_gibberish(self, text:str) -> str:
-        return ''.join(filter(self.is_word,text.split()))
+        return ' '.join(filter(self.is_word,text.split()))
         
     def is_giberrish(self, word:str) -> bool:
         return not self.is_word(word)
